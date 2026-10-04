@@ -1,0 +1,5 @@
+1|Programming in Scala|Odersky|2021|编程|
+2|Scala for the Impatient|Horstmann|2022|编程|
+3|How to Design Programs|Felleisen|2018|函数式|
+4|Functional Programming in Scala|Chiusano|2023|函数式|
+5|The Pragmatic Programmer|Hunt|2019|工程|
