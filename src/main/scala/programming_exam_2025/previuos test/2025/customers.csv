@@ -1,0 +1,51 @@
+id,name,dob,email,phone,currency,street,area,city,region,country,postcode
+CUS001,Ethan Chen,1985-04-12,ethan.chen@example.com,0086 138 00138000,CNY,18 Wangjing Street,Chaoyang,Beijing,Beijing,China,100020
+CUS002,Aoife Murphy,1992-11-20,aoife.murphy@example.com,00353 87 1234567,EUR,14 The Green,Drimnagh,Dublin,Leinster,Ireland,D12 A1B2
+CUS003,Benjamin Wallace,1978-01-05,ben.wallace@example.com,0044 7700 900001,GBP,7 High Street,Ancoats,Manchester,Greater Manchester,The UK,M4 5AD
+CUS004,Jasmine Davis,2001-07-28,jasmine.davis@example.com,001 202 5550101,USD,45 Oak Lane,Georgetown,Washington,DC,The US,20007
+CUS005,Li Wei,1995-03-19,li.wei@example.com,0086 139 12345678,CNY,29 Pujiang Road,Minhang,Shanghai,Shanghai,China,200241
+CUS006,Connor O'Connell,1980-09-03,connor.oc@example.com,00353 86 9876543,EUR,8 Salthill Terrace,Salthill,Galway,Connacht,Ireland,H91 C3D4
+CUS007,Priya Patel,1998-12-11,priya.patel@example.com,0044 7700 900002,GBP,12 Richmond Road,Clifton,Bristol,Bristol,The UK,BS8 1AU
+CUS008,Kyle Miller,1965-06-25,kyle.miller@example.com,001 310 5550102,USD,99 Sunset Boulevard,Westwood,Los Angeles,CA,The US,90024
+CUS009,Wang Xiu Ying,1972-10-01,wang.xy@example.com,0086 133 33334444,CNY,50 Ti Yu Road,Tianhe,Guangzhou,Guangdong,China,510620
+CUS010,Sinead Kelly,1990-02-14,sinead.k@example.com,00353 85 2468013,EUR,23 Barrack Street,City Centre,Cork,Munster,Ireland,T12 E5F6
+CUS011,Oliver Johnson,1983-05-30,oliver.j@example.com,0044 7700 900003,GBP,4 The Crescent,Leith,Edinburgh,Scotland,The UK,EH6 6QQ
+CUS012,Sarah Rodriguez,1996-08-07,sarah.r@example.com,001 718 5550103,USD,10 Bleecker Street,Greenwich Village,New York,NY,The US,10012
+CUS013,Zhang Bo,1988-11-23,zhang.bo@example.com,0086 137 78901234,CNY,6 Fuxing Avenue,Xuhui,Shanghai,Shanghai,China,200031
+CUS014,Darragh Nolan,1975-01-16,darragh.n@example.com,00353 83 1123344,EUR,3 The Quays,Waterford,Waterford,Munster,Ireland,X91 V7W8
+CUS015,Fiona Campbell,1991-04-04,fiona.c@example.com,0044 7700 900004,GBP,19 Castle Street,City Centre,Glasgow,Scotland,The UK,G2 4AD
+CUS016,David Lee,1987-12-09,david.lee@example.com,001 617 5550104,USD,8 Beacon Street,Back Bay,Boston,MA,The US,02108
+CUS017,Ma Jing,1970-02-28,ma.jing@example.com,0086 135 67890123,CNY,10 Jiangnan Road,Haimen,Nantong,Jiangsu,China,226100
+CUS018,Roisin Byrne,1999-06-17,roisin.b@example.com,00353 89 5544332,EUR,5 Abbey Road,Lucan,Dublin,Leinster,Ireland,K78 P9R0
+CUS019,George Davies,1994-08-21,george.d@example.com,0044 7700 900005,GBP,20 Park Lane,Mayfair,London,Greater London,The UK,W1K 7AA
+CUS020,Emily Harris,1984-03-02,emily.h@example.com,001 415 5550105,USD,3 Embarcadero Center,Financial District,San Francisco,CA,The US,94111
+CUS021,Zhou Jie,1982-05-15,zhou.jie@example.com,0086 136 22221111,CNY,7 Lushan Road,Jianye,Nanjing,Jiangsu,China,210019
+CUS022,Liam Walsh,1977-10-26,liam.w@example.com,00353 88 7766554,EUR,1 The Avenue,Dooradoyle,Limerick,Munster,Ireland,V94 X0Y1
+CUS023,Holly Green,1993-07-06,holly.g@example.com,0044 7700 900006,GBP,15 Market Street,Northern Quarter,Leeds,West Yorkshire,The UK,LS1 6AA
+CUS024,Michael Clark,1976-01-18,michael.c@example.com,001 312 5550106,USD,11 Wacker Drive,The Loop,Chicago,IL,The US,60606
+CUS025,Sun Miao,1997-09-08,sun.miao@example.com,0086 134 45678901,CNY,22 Haibin Road,Futian,Shenzhen,Guangdong,China,518038
+CUS026,Eamonn Doyle,1968-12-05,eamonn.d@example.com,00353 87 3456789,EUR,6 O'Connell Street,City Centre,Sligo,Connacht,Ireland,F91 A2B3
+CUS027,Sophie King,1986-03-29,sophie.k@example.com,0044 7700 900007,GBP,3 Queen Square,Temple,Bath,Somerset,The UK,BA1 2HY
+CUS028,Daniel Wilson,1990-10-14,daniel.w@example.com,001 214 5550107,USD,25 Elm Street,Uptown,Dallas,TX,The US,75201
+CUS029,Zhao Rui,1981-06-03,zhao.rui@example.com,0086 132 10987654,CNY,3 Daming Palace Road,Weiyang,Xi'an,Shaanxi,China,710016
+CUS030,Bronagh Higgins,1994-07-13,bronagh.h@example.com,00353 86 5432109,EUR,7 River Lane,City Centre,Drogheda,Leinster,Ireland,A92 C4D5
+CUS031,James White,1973-09-22,james.w@example.com,0044 7700 900008,GBP,5 Albion Place,The Lanes,Brighton,East Sussex,The UK,BN1 1EE
+CUS032,Ava Thompson,1991-04-01,ava.t@example.com,001 404 5550108,USD,15 Peachtree Street,Midtown,Atlanta,GA,The US,30309
+CUS033,Gao Hui,1979-08-18,gao.hui@example.com,0086 131 99887766,CNY,1 Yu Garden Road,Huangpu,Shanghai,Shanghai,China,200010
+CUS034,Cian O'Sullivan,1989-05-09,cian.os@example.com,00353 87 6543210,EUR,11 Grand Parade,City Centre,Kilkenny,Leinster,Ireland,R95 F8G9
+CUS035,Laura Smith,1997-02-07,laura.s@example.com,0044 7700 900009,GBP,10 Downing Avenue,Headingley,Leeds,West Yorkshire,The UK,LS6 3AE
+CUS036,Ryan Hall,1980-11-29,ryan.h@example.com,001 206 5550109,USD,1 Space Needle Way,Lower Queen Anne,Seattle,WA,The US,98109
+CUS037,Chen Yan,1993-12-04,chen.yan@example.com,0086 130 55556666,CNY,4 Cheng Gong Road,Siming,Xiamen,Fujian,China,361001
+CUS038,Niamh Ryan,1971-03-08,niamh.r@example.com,00353 86 1029384,EUR,17 Patrick Street,City Centre,Limerick,Munster,Ireland,V94 B5C6
+CUS039,Thomas Brown,1984-06-10,thomas.b@example.com,0044 7700 900010,GBP,21 Piccadilly,City Centre,Manchester,Greater Manchester,The UK,M1 1RG
+CUS040,Jessica King,1995-09-17,jessica.k@example.com,001 512 5550110,USD,30 Brazos Street,Downtown,Austin,TX,The US,78701
+CUS041,Lin Dong,1976-04-24,lin.dong@example.com,0086 138 87654321,CNY,9 West Lake Avenue,Shangcheng,Hangzhou,Zhejiang,China,310009
+CUS042,Fintan Lynch,1996-01-27,fintan.l@example.com,00353 85 9900112,EUR,13 Eyre Square,City Centre,Galway,Connacht,Ireland,H91 D2E3
+CUS043,Megan Walker,1990-10-02,megan.w@example.com,0044 7700 900011,GBP,8 Docklands Street,Wapping,London,Greater London,The UK,E1W 3TR
+CUS044,Andrew Scott,1983-05-11,andrew.s@example.com,001 619 5550111,USD,22 Coast Blvd,La Jolla,San Diego,CA,The US,92037
+CUS045,Xu Juan,1974-11-06,xu.juan@example.com,0086 139 55443322,CNY,16 Zhongshan Road,Qingdao,Qingdao,Shandong,China,266001
+CUS046,Orla Kelly,1988-02-19,orla.k@example.com,00353 83 2345678,EUR,4 College Road,Blackrock,Cork,Munster,Ireland,T12 R5S6
+CUS047,Paul Henderson,1992-08-31,paul.h@example.com,0044 7700 900012,GBP,2 The Mall,Temple Bar,Cardiff,Wales,The UK,CF10 1AA
+CUS048,Nicole Perez,1975-07-23,nicole.p@example.com,001 702 5550112,USD,5 Fremont Street,Downtown,Las Vegas,NV,The US,89101
+CUS049,Guo Ming,1999-01-01,guo.m@example.com,0086 136 76543210,CNY,12 Jinji Lake Avenue,Suzhou Industrial Park,Suzhou,Jiangsu,China,215021
+CUS050,Seamus McCarthy,1986-10-10,seamus.m@example.com,00353 89 8765432,EUR,18 Strand Street,Town Centre,Tralee,Munster,Ireland,V92 N3P4
