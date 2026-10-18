@@ -54,7 +54,7 @@ sbt "run help"          # 打印目录
 
 | 文件 | 作用 | 用到的语法 |
 |------|------|------------|
-| `model.scala` | `Book` 数据 | case class、Option、字符串插值 |
+| `Model.scala` | `Book` 数据 | case class、Option、字符串插值 |
 | `Library.scala` | 增删借还、搜索、统计 | 不可变 List、Either、高阶函数 |
 | `Storage.scala` | 读写 `data/bookshelf.txt` | `java.nio.file.Files` |
 | `BookShelfApp.scala` | 菜单循环 | `StdIn.readLine`、`match` |

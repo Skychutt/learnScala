@@ -1,0 +1,6 @@
+id,name,currency,units,centiunits,quantity
+P001,Notebook,CNY,12,50,20
+P002,Pen,CNY,3,00,50
+P003,Backpack,CNY,89,90,8
+P004,Water Bottle,CNY,25,00,0
+P005,Pencil Case,CNY,18,80,15

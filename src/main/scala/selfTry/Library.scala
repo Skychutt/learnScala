@@ -19,16 +19,16 @@ case class Library(books:List[Book] = Nil) {
   }
 
 
-  def borrow(id:Int,who:String): Either[String,Library] = {
-    
-    byId(id) match{
-      case None => Left(s"没有编号为 $id 的书")
-      case Some(book) if book.borrower.isDefined => Left(s"编号为 $id 的书已经被借走")
-      case Some(book) if who.trim.isEmpty => Left("借书的人不能为空")
-      case Some(book) if book.borrower.isEmpty => Right(replace(book.copy(borrower = Some(who.trim))))
-        
-    }
-  }
+//  def borrow(id:Int,who:String): Either[String,Library] = {
+//    
+//    byId(id) match{
+//      case None => Left(s"没有编号为 $id 的书")
+//      case Some(book) if book.borrower.isDefined => Left(s"编号为 $id 的书已经被借走")
+//      case Some(book) if who.trim.isEmpty => Left("借书的人不能为空")
+//      case Some(book) if book.borrower.isEmpty => Right(replace(book.copy(borrower = Some(who.trim))))
+//        
+//    }
+//  }
     
   def find(keyword:String): List[Book] = {
     if (keyword.trim.toLowerCase.isEmpty ) books

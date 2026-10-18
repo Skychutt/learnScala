@@ -35,14 +35,14 @@ BookShelfApp          菜单、输入、打印、预览
 
 | 文件 | 类型 | 职责 |
 |------|------|------|
-| `model.scala` | `case class Book` + `object Book` | 一本书的数据；屏幕上一行怎么显示；文件里一行怎么读写 |
+| `Model.scala` | `case class Book` + `object Book` | 一本书的数据；屏幕上一行怎么显示；文件里一行怎么读写 |
 | `Library.scala` | `case class Library` + `object Library` | 藏书列表上的业务规则 |
 | `Storage.scala` | `object Storage` | 读写 `data/bookshelf.txt` |
 | `BookShelfApp.scala` | `object BookShelfApp` + `@main def bookShelf` | 菜单循环和自动演示 |
 
 ---
 
-## 1. `Book`（`model.scala`）
+## 1. `Book`（`Model.scala`）
 
 一本书。`borrower` 为 `None` 表示在架，`Some(姓名)` 表示已借出。
 
