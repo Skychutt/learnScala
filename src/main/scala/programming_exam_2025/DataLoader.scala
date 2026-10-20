@@ -27,7 +27,6 @@ object DataLoader {
             require(fields.size == 2, "Stock record must have 2 fields")
             val itemId = fields(0).trim
             val quantity = fields(1).trim.toInt
-            require(quantity >= 0, "Stock must be non-negative")
             // 找不到编号时 Map 会抛异常，交给本行的 catch 处理。
             val item = items(itemId)
             results = results :+ (item, quantity)
@@ -169,10 +168,10 @@ object DataLoader {
             val count = fields(3).trim.toInt
             require(count >= 0, "Number of order lines must be non-negative")
             // 前四列是订单资料，后面每件商品占两列：商品 ID、数量。
-            val expected = 4L + 2L * count
-            require(fields.size.toLong >= expected, "Missing item/quantity pairs")
+            val expected = 4 + 2 * count
+            require(fields.size >= expected, "Missing item/quantity pairs")
             // 允许末尾空列，但不允许声明数量之外还有商品数据。
-            var extraIndex = expected.toInt
+            var extraIndex = expected
             while (extraIndex < fields.size) {
               require(fields(extraIndex).trim.isEmpty, "Unexpected data after declared item pairs")
               extraIndex += 1
@@ -184,13 +183,10 @@ object DataLoader {
             while (index < count) {
               val itemId = fields(4 + 2 * index).trim
               val quantity = fields(5 + 2 * index).trim.toInt
-              require(quantity > 0, "Order quantity must be positive")
               // 找不到编号时 Map 会抛异常，交给本行的 catch 处理。
               val item = items(itemId)
-              // 同一个商品再次出现时，把数量相加。
-              val oldQuantity = orderItems.getOrElse(item, 0)
-              val newQuantity = Math.addExact(oldQuantity, quantity)
-              orderItems = orderItems + (item -> newQuantity)
+              // 直接保存本行读到的商品和数量，假设每组商品编号不重复。
+              orderItems = orderItems + (item -> quantity)
               index += 1
             }
             val order = Order(orderId, customer, status, None, orderItems)

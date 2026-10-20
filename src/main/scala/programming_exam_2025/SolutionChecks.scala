@@ -112,7 +112,7 @@ object SolutionChecks:
     try
       Console.withOut(errorStream) {
         val stockFile = fixture("stock.csv", "Item ID,Quantity\nVG004,2\nUNKNOWN,3\nVG004,4\nVG007,-1\nVG014,abc\nVG020,5\n")
-        check(DataLoader.loadStock(stockFile.toString, Store.getItems).map(_._2) == Vector(2, 4, 5),
+        check(DataLoader.loadStock(stockFile.toString, Store.getItems).map(_._2) == Vector(2, 4, -1, 5),
           "Bad stock rows skipped; later good rows retained")
         val itemsFile = fixture("items.csv", "Item ID,Name,Description,Rating,Currency,Units,Centiunits\n" +
           "I1,Notebook,Description,All,USD,1,50\nI2,Bad,Description,Invalid,USD,1,0\n" +
@@ -130,7 +130,7 @@ object SolutionChecks:
           "O5,CUS004,New,1,VG004,0\nO6,CUS004,New,1,VG004,1,EXTRA,1\n" +
           "O7,CUS004,New,1,VG004,1,,,,\n")
         val parsed = DataLoader.loadOrders(orderFile.toString, Store.getCustomers, Store.getItems)
-        check(parsed.map(_.id) == Vector("O1", "O7") && parsed.head.items(item) == 3, "Order error recovery and merging")
+        check(parsed.map(_.id) == Vector("O1", "O7") && parsed.head.items(item) == 2, "Order error recovery and direct Map storage")
         check(DataLoader.loadItems(temp.resolve("missing.csv").toString).isEmpty, "Missing file handled")
         check(DataLoader.loadItems(fixture("empty.csv", "").toString).isEmpty, "Empty file handled")
         check(DataLoader.loadItems(fixture("header.csv", "wrong,header\n").toString).isEmpty, "Wrong header handled")

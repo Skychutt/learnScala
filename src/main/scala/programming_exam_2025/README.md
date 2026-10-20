@@ -34,8 +34,8 @@ sbt 'runMain programming_exam_2025.SolutionChecks'
 2. **Adult 年龄边界**：严格按 PDF 的 “over the age of 18” 实现为周岁 `> 18`；Restricted 为 `>= 15`。如果老师实际希望 Adult 为 18 岁及以上，把 `AgeRating.allows` 中的 `age > 18` 改为 `age >= 18` 即可。年龄按运行当天计算，验证方法也允许传入固定日期。
 3. **金额精度**：使用 `BigDecimal` 和试卷给定的 12 个方向的汇率，反向汇率直接使用原表，不能自行用倒数替代。运算保留全部精度，只在输出时四舍五入到两位小数。金额相加或相减必须币种相同，否则抛出 `IllegalArgumentException`；负数金额可表示差额，商品售价不能为负。
 4. **验证方式**：地址和电话的 `create` 方法返回 `Either[String, ...]`，`Left` 表示验证失败，`Right` 包含合法对象。字段均不可变，构造函数及 `copy` 仍有 `require` 防止绕过校验。邮编和电话保留字符串，避免丢失前导零。
-5. **CSV 行宽**：订单根据 `Num Items` 读取商品/数量对，接受可变行宽及末尾空列，拒绝超出声明数量的非空字段。同一商品出现多次时合并数量。当前使用 split(",", -1) 读取所给简单 CSV，不处理带引号的字段、字段内部逗号或跨行字段；需要时再添加解析器。
-6. **引用完整性**：先加载客户和商品，再加载库存与订单；不存在的客户或商品、负库存、非正订单数量、无效日期/币种/状态均报告错误。CSV 没有物流编号字段，因此加载后的 `trackingId` 为 `None`，可通过 `withTrackingId` 设置。
+5. **CSV 行宽**：订单根据 `Num Items` 读取商品/数量对，接受可变行宽及末尾空列，拒绝超出声明数量的非空字段。Loader 直接将商品和数量存入 Map；同一商品重复出现时后面的数量覆盖前面的数量。当前使用 split(",", -1) 读取所给简单 CSV，不处理带引号的字段、字段内部逗号或跨行字段；需要时再添加解析器。
+6. **引用完整性**：先加载客户和商品，再加载库存与订单；不存在的客户或商品、无效日期/币种/状态由读取过程中的异常报告。Loader 不额外检查库存数量；订单数量仍由 Order 模型验证。CSV 没有物流编号字段，因此加载后的 `trackingId` 为 `None`，可通过 `withTrackingId` 设置。
 7. **已有订单与库存**：导入 Processed、Collected、Delivered 历史订单时不再次扣库存。通过 Store 新处理订单时，库存足够则全部扣除并设为 Processed，不足则设为 AwaitingStock 且不扣任何库存。取消 Processed 订单会归还库存，Collected 和 Delivered 不能取消。
 8. **不可变订单**：`addItem`、`removeItem`、`updateQuantity`、`updateStatus` 等返回新订单，需要保存返回值。商品修改仅允许 New/AwaitingStock；状态更新按流程约束。`Order.updateStatus` 本身不操作 Store，真实业务的处理与状态流转使用 Store 的方法。
 
